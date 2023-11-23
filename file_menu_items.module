@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Supports creating menu items that are links to local files.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function file_menu_items_menu() {
+  // Define a router item for the files directory.
+  $items[file_stream_wrapper_get_instance_by_scheme(file_default_scheme())
+    ->getDirectoryPath()] = array(
+    'page callback' => 'backdrop_not_found',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}

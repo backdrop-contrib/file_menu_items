@@ -1,0 +1,4 @@
+name = File Menu Items
+description = Supports creating menu items that are links to files (like PDFs)
+backdrop = 1.x
+type = module
